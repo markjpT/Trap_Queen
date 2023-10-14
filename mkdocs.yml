@@ -1,0 +1,139 @@
+site_description: Paisa is an open source personal finance manager. It builds on top of the ledger double entry accounting tool.
+site_author: Anantha Kumaran
+site_name: Paisa
+site_url: https://paisa.fyi
+repo_url: https://github.com/ananthakumaran/paisa
+repo_name: ananthakumaran/paisa
+nav:
+  - index.md
+  - 'Getting Started':
+    - getting-started/installation.md
+    - getting-started/tutorial.md
+  - 'Reference':
+    - reference/accounts.md
+    - reference/commodities.md
+    - reference/journal.md
+    - reference/allocation-targets.md
+    - reference/budget.md
+    - reference/bulk-edit.md
+    - reference/import.md
+    - reference/retirement.md
+    - reference/recurring.md
+    - reference/config.md
+    - reference/ledger-cli.md
+    - reference/analysis.md
+    - 'Tax':
+      - reference/tax/index.md
+      - reference/tax/tax-harvesting.md
+      - reference/tax/capital-gains.md
+      - reference/tax/schedule-al.md
+  - 'Demo': 'https://demo.paisa.fyi'
+
+theme:
+  custom_dir: overrides
+  name: material
+  icon:
+    logo: paisa/logo
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      primary: hsl(229deg, 53%, 53%)
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: hsl(229deg, 53%, 53%)
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      linenums: false
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - javascripts/extra.js
+extra_css:
+  - stylesheets/extra.css
+
+copyright: |
+  Copyright © 2022 - 2023 Anantha Kumaran <br \> <a href="#__consent">Change cookie settings</a>
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ananthakumaran/paisa
+    - icon: simple/matrix
+      link: https://matrix.to/#/#paisa:matrix.org
+  consent:
+    actions:
+      - accept
+      - reject
+      - manage
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  analytics:
+    provider: google
+    property: G-NL7XFHE65Z
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://docs.google.com/forms/d/e/1FAIpQLSejpTiljuhsviEvXFBN-Z5rJZ_dkXHV5RaZzqpyCAZF1nIFiQ/viewform?usp=pp_url&entry.1125403938={url}" target="_blank" rel="noopener">feedback form</a>.
+
+plugins:
+  - search
+
+hooks:
+  - docs/lexer/hook.py

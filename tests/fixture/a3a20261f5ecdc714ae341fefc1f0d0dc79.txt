@@ -1,0 +1,7 @@
+a3a20261f5ecdc714ae341fefc1f0d0dc7974a2c4e62583914816e376812d039 *jetbrains-toolbox-2.0.4.17212.exe
+
+87260d40f6a4a8250b9b2fa2f6b2aa3572145bae507a9ca94057b66f86a7744b *ideaIC-2023.2.3.exe\
+
+https://mark.sonarqube.server/
+
+'.github/'folder
